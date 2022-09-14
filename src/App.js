@@ -1,10 +1,14 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import UserRegister from "./pages/user/register/UserRegister";
 
 function App() {
   return (
-    <div className="App">
-      <h1>WELCOME TO ORGANIC BIN</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/user/register" element={<UserRegister />} exact />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
